@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주유ON - 가장 스마트한 주유 타이밍</title>
+    <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header container">
+        <img class="logo" src="asset/logo.svg" alt="logo" />
+        <a href="#" class="btn btn-primary download-button">앱 다운로드</a>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>가장 스마트한 <span>주유 타이밍.</span><br>AI가 알려드려요.</h1>
+            <a href="#" class="btn btn-primary btn-stores download-button">App Store / Google Play</a>
+            <div class="image-placeholder hero-image"></div>
+        </section>
+        
+        <section class="features container">
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>AI 기반 최적 주유 시기 예측.</h3>
+                    <p>AI가 국제 유가와 환율을 분석해 다음 주 유가를 예측하고, 앱으로 최적의 타이밍을 안내합니다.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>명확한 유가 시장 분석 & 전망</h3>
+                    <p>미래 유가 흐름을 예측해, 더욱 현명한 주유소비를 할 수 있도록 도와드립니다.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>주요 뉴스 요약.</h3>
+                    <p>국내외 주요 유가 뉴스만 매일 요약해서 제공합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta container">
+            <h2>지금 바로 다운로드하고, 주유비를 아껴보세요!</h2>
+            <p>앱스토어와 구글플레이에서 만나보세요.</p>
+            <a href="#" class="btn btn-primary download-button">다운로드</a>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-text">
+            Copyright ⓒ 주유ON. All right reserved.
+        </div>
+    </footer>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="modal-content" class="modal-content">
+            <h2>🚀 출시 준비 중</h2>
+            <p>현재 앱 출시를 위해 준비 단계에 있습니다.<br>조금만 기다려주시면 곧 만나보실 수 있어요!</p>
+            <button id="modal-close-btn" class="btn btn-primary">확인</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadButtons = document.querySelectorAll('.download-button');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+
+            const openModal = () => {
+                modalOverlay.style.display = 'flex';
+                setTimeout(() => {
+                    modalOverlay.classList.add('show');
+                }, 10);
+            };
+
+            const closeModal = () => {
+                modalOverlay.classList.remove('show');
+                setTimeout(() => {
+                    modalOverlay.style.display = 'none';
+                }, 300); 
+            };
+
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    openModal();
+                });
+            });
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
