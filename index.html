@@ -7,10 +7,19 @@
     <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS93VNJFRN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DS93VNJFRN');
+    </script>
 </head>
 <body>
     <header class="header container">
-        <img class="logo" src="asset/logo.svg" alt="logo" />
+        <img class="logo" src="asset/logo.svg" alt="주유ON 로고" />
         <!-- <a href="#" class="btn btn-primary download-button">앱 다운로드</a> -->
     </header>
 
@@ -50,8 +59,8 @@
             Copyright ⓒ 주유ON. All right reserved.
         </div>
         <div class="footer-links">
-            <a href="mailto:dnomad.space@gmail.com">문의하기</a>
-            <a href="https://dnomad-space.github.io/juyuon/privacy/" target="_blank">개인정보처리방침</a>
+            <a href="mailto:dnomad.space@gmail.com" id="contact-link">문의하기</a>
+            <a href="https://dnomad-space.github.io/juyuon/privacy/" target="_blank" id="privacy-policy-link">개인정보처리방침</a>
         </div>
     </footer>
 
@@ -68,6 +77,8 @@
             const downloadButtons = document.querySelectorAll('.download-button');
             const modalOverlay = document.getElementById('modal-overlay');
             const modalCloseBtn = document.getElementById('modal-close-btn');
+            const contactLink = document.getElementById('contact-link');
+            const privacyPolicyLink = document.getElementById('privacy-policy-link');
 
             const openModal = () => {
                 modalOverlay.style.display = 'flex';
@@ -86,16 +97,33 @@
             downloadButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     e.preventDefault(); 
+                    gtag('event', 'click_download_cta');
                     openModal();
                 });
             });
 
-            modalCloseBtn.addEventListener('click', closeModal);
+            modalCloseBtn.addEventListener('click', () => {
+                gtag('event', 'close_launch_modal');
+                closeModal();
+            });
+
             modalOverlay.addEventListener('click', (e) => {
                 if (e.target === modalOverlay) {
                     closeModal();
                 }
             });
+
+            if (contactLink) {
+                contactLink.addEventListener('click', () => {
+                    gtag('event', 'click_contact');
+                });
+            }
+
+            if (privacyPolicyLink) {
+                privacyPolicyLink.addEventListener('click', () => {
+                    gtag('event', 'click_privacy_policy');
+                });
+            }
         });
     </script>
 </body>

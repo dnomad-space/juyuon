@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>주유ON - 가장 스마트한 주유 타이밍</title>
+        <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WDXDZ6TBZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DS93VNJFRN');
+        </script>
+    
+        <script type="text/javascript">
+            function redirectByOS() {
+                const IOS_STORE_URL = "https://apps.apple.com/app/6747162499"; 
+                const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.nomad.juyuon"; 
+                const FALLBACK_URL = "https://dnomad-space.github.io/juyuon"; 
+
+                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                let targetOS = "Desktop or Other";
+
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                targetOS = "iOS";
+                
+                gtag('event', 'store_link_click', { 'os_type': 'iOS' });
+                window.location.href = IOS_STORE_URL;
+                return;
+                }
+                
+                if (/android/i.test(userAgent)) {
+                targetOS = "Android";
+                
+                gtag('event', 'store_link_click', { 'os_type': 'Android' });
+                window.location.href = ANDROID_STORE_URL;
+                return;
+                }
+                
+                gtag('event', 'store_link_click', { 'os_type': 'Desktop' });
+                window.location.href = FALLBACK_URL;
+            }
+
+            // 페이지가 로드되자마자 함수 실행
+            redirectByOS();
+        </script>
+    </head>
+    <body>
+    <p>스토어로 이동 중입니다...</p>
+    </body>
+</html>
