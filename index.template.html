@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4CD39">
+  <title>주유온 2.0 | 주유 타이밍과 주유비 비교</title>
+  <meta name="description" content="전국 휘발유·경유·고급휘발유 가격과 발행 당시 유가 전망을 확인하세요. 내 주유량에 따른 금액 차이, 추가 이동비를 반영한 주유소 가격 비교를 주유온에서 할 수 있습니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://dnomad-space.github.io/juyuon/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="주유온">
+  <meta property="og:title" content="주유온 2.0 — 오늘 넣을까, 조금 기다릴까?">
+  <meta property="og:description" content="주유 전, 가격과 근거부터. 내 주유량으로 금액 차이를 확인하고 오늘의 주유를 결정하세요.">
+  <meta property="og:url" content="https://dnomad-space.github.io/juyuon/">
+  <meta property="og:image" content="https://dnomad-space.github.io/juyuon/asset/img_appscreen.png">
+  <meta property="og:image:alt" content="주유온 앱의 주유 타이밍 안내 화면">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/app.js" type="module"></script>
+  <script type="application/ld+json">{{SCHEMA}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header shell">
+    <a class="brand" href="./" aria-label="주유온 홈"><img src="asset/icon_oil.svg" width="27" height="29" alt=""><span>주유<span class="brand-on">ON</span></span><span class="version">2.0</span></a>
+    <nav aria-label="주 메뉴"><a href="#briefing">유가 브리핑</a><a href="#compare">주유비 비교</a><a href="guide/" data-analytics-event="guide_open" data-source="header">데이터·예측 기준</a></nav>
+    <a class="button button-dark header-download" href="download/" data-analytics-event="download_page_open" data-platform="selection" data-source="header">앱으로 만나기 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> 주유 전, 가격과 근거부터</p><h1 id="hero-title">오늘 넣을까,<br><span class="highlight">조금 기다릴까?</span></h1><p class="hero-description">리터당 가격을 내 주유비로 바꿔 보세요.<br>지금의 가격과 앞으로의 전망을 구분해,<br class="mobile-only"> 주유할 때의 고민을 덜어드립니다.</p></div>
+      <div class="hero-note"><span class="note-index">THE FUEL NOTE / 02</span><div class="note-glyph" aria-hidden="true"><img src="asset/icon_oil.svg" width="66" height="73" alt=""><span>↘</span></div><p>작은 가격 차이도<br><strong>내가 넣을 만큼, 정확하게.</strong></p><a href="#compare">내 주유비 계산하기 <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="briefing" class="briefing-section" aria-labelledby="briefing-title">
+      <div class="section-heading"><div><p class="section-kicker">01 / FUEL BRIEFING</p><h2 id="briefing-title">숫자로 보는 주유 타이밍</h2></div><div class="issue"><span id="freshness-badge" class="status-pill">날짜가 명시된 발행본</span><time id="issued-at" datetime="{{ISSUED_AT}}">{{ISSUED_LABEL}} KST 발행</time></div></div>
+      <p id="data-notice" class="data-notice">이 페이지는 발행 시점의 데이터를 담고 있습니다. 가격의 원천 관측 시각은 제공되지 않아 발행 시각과 구분합니다.</p>
+      <div class="briefing-grid">
+        <article class="market-card panel">
+          <div class="market-top"><div class="fuel-tabs" role="group" aria-label="비교할 유종"><button type="button" class="active" data-fuel="gasoline" aria-pressed="true">휘발유</button><button type="button" data-fuel="diesel" aria-pressed="false">경유</button><button type="button" data-fuel="premium_gasoline" aria-pressed="false">고급유</button></div><span class="unit-label">전국 평균 · 원/L</span></div>
+          <div class="market-price"><strong id="current-price">{{GASOLINE_PRICE}}</strong><span>원/L</span></div>
+          <p id="price-change" class="price-change">{{PRICE_CHANGE}}</p>
+          <div id="price-chart">{{CHART}}</div>
+          <div class="chart-footer"><span><i class="legend-line" aria-hidden="true"></i> 발행본에 담긴 가격</span><label class="forecast-toggle"><input id="show-forecast" type="checkbox"><span>발행 당시 전망 함께 보기</span></label></div>
+          <p class="microcopy" id="chart-note">휘발유 전국 평균의 발행일별 저장값입니다. 관측 누락은 선으로 연결하지 않습니다.</p>
+          <details class="price-table"><summary>유종별 가격을 표로 보기</summary><table><caption>{{ISSUED_LABEL}} 발행본 · 원천 관측시각 미제공</caption><thead><tr><th scope="col">유종</th><th scope="col">가격(원/L)</th><th scope="col">이전 저장값 대비(원/L)</th></tr></thead><tbody>{{PRICE_ROWS}}</tbody></table></details>
+        </article>
+
+        <article class="decision-card panel" aria-labelledby="decision-title">
+          <div class="card-label"><span class="tiny-square" aria-hidden="true"></span> MY FUEL PLAN</div><h3 id="decision-title">내가 넣을 양으로<br>비교해 보세요.</h3>
+          <div class="volume-row"><span>이번에 넣을 양</span><div class="volume-options" role="group" aria-label="주유량"><button type="button" data-liters="20" aria-pressed="false">20L</button><button type="button" data-liters="40" aria-pressed="true" class="active">40L</button><button type="button" data-liters="60" aria-pressed="false">60L</button></div></div>
+          <div class="cost-line"><span id="cost-label">발행본 가격으로 40L 주유하면</span><strong id="estimated-cost">{{COST_40}}<small>원</small></strong></div>
+          <div id="forecast-comparison" class="forecast-comparison" aria-live="polite"><p class="forecast-intro">전망 비교는 데이터 시각을 확인한 뒤 표시됩니다.</p></div>
+          <p class="decision-caption" id="decision-caption">전망은 참고 시나리오입니다. 필요한 주유를 미루기보다 금액 차이와 실제 주행 계획을 함께 확인하세요.</p>
+          <a class="text-link" href="guide/#forecast" data-analytics-event="guide_open" data-source="decision">전망의 근거와 한계 보기 <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <div class="source-line"><span>가격 출처 <a href="https://www.opinet.co.kr/" target="_blank" rel="noopener noreferrer" data-analytics-event="data_source_open" data-source="opinet">한국석유공사 오피넷 ↗</a></span><span>분석·발행 주유온 · 개별 주유소의 판매가격과 다를 수 있습니다.</span></div>
+    </section>
+
+    <section id="compare" class="compare-section" aria-labelledby="compare-title">
+      <div class="compare-heading"><p class="section-kicker">02 / REAL-WORLD SAVINGS</p><h2 id="compare-title">조금 더 싼 곳,<br>찾아갈 만큼 이득일까?</h2><p>두 주유소의 가격을 넣어 보세요.<br>추가로 달리는 데 쓰는 연료비까지<br>함께 계산할 수 있습니다.</p><span class="outline-chip">로그인 없이 · 입력값은 기기 안에서 계산</span></div>
+      <form id="station-compare" class="compare-form panel">
+        <div class="input-grid"><label for="first-price">가까운 주유소<span class="input-unit"><input id="first-price" name="firstPrice" inputmode="decimal" type="number" step="0.01" min="1" max="10000" required placeholder="리터당 가격"><span>원/L</span></span></label><label for="second-price">비교할 주유소<span class="input-unit"><input id="second-price" name="secondPrice" inputmode="decimal" type="number" step="0.01" min="1" max="10000" required placeholder="리터당 가격"><span>원/L</span></span></label></div>
+        <label class="amount-label" for="compare-liters">주유량<span class="input-unit small-input"><input id="compare-liters" name="liters" inputmode="decimal" type="number" step="0.1" min="1" max="200" value="40" required><span>L</span></span></label>
+        <details class="detour-options"><summary>추가 이동에 드는 연료비도 반영하기 <span aria-hidden="true">＋</span></summary><div class="input-grid"><label for="extra-km">추가 왕복 이동거리<span class="input-unit"><input id="extra-km" name="extraKm" inputmode="decimal" type="number" step="0.1" min="0" max="1000" value="0"><span>km</span></span></label><label for="efficiency">내 차 실제 연비<span class="input-unit"><input id="efficiency" name="efficiency" inputmode="decimal" type="number" step="0.1" min="0.1" max="100" placeholder="예: 12"><span>km/L</span></span></label></div><p class="microcopy">평소 경로보다 추가로 달리는 왕복 거리입니다. 실제 경로를 조회하지 않으며 통행료·시간·카드 할인은 포함하지 않습니다.</p></details>
+        <button type="submit" class="button button-dark compare-button">금액 차이 확인하기 <span aria-hidden="true">↗</span></button><div id="compare-result" class="compare-result" role="status" aria-live="polite"><span class="microcopy">입력한 가격과 주유량으로 예상 금액 차이를 계산합니다.</span></div>
+        <noscript><p>직접 비교 계산은 JavaScript가 필요합니다. 계산식: (가까운 곳 가격 − 비교할 곳 가격) × 주유량 − 추가 거리 ÷ 연비 × 가까운 곳 가격.</p></noscript>
+      </form>
+    </section>
+
+    <section class="evidence-section" aria-labelledby="evidence-title"><div class="section-heading"><div><p class="section-kicker">03 / READ THE EVIDENCE</p><h2 id="evidence-title">숫자 뒤의 기준도, 숨김없이.</h2></div><a href="guide/" class="text-link" data-analytics-event="guide_open" data-source="evidence">데이터·예측 기준 ↗</a></div><div class="evidence-grid"><article><span class="evidence-number">01</span><h3>가격과 전망을 구분합니다</h3><p>전국 평균과 개별 주유소 가격은 다릅니다. 모델의 미래 가격은 관측값과 별도로 표시합니다.</p></article><article><span class="evidence-number">02</span><h3>점수를 적중률로 바꾸지 않습니다</h3><p>모델의 일치도는 검증된 성공 확률이 아닙니다. 없는 관측값이나 오차 범위를 만들어 보여주지 않습니다.</p></article><article><span class="evidence-number">03</span><h3>오래된 전망은 멈춥니다</h3><p>발행 후 48시간이 지나면 예상 금액 비교를 중단합니다. 직접 입력하는 주유소 비교는 계속 사용할 수 있습니다.</p></article></div></section>
+
+    <section class="regional-section panel" aria-labelledby="regional-title"><div class="regional-intro"><p class="section-kicker">LOCAL PRICE SAMPLES</p><h2 id="regional-title">지역별 저가 주유소 표본</h2><p>시군구별 저가 주유소 최대 10곳을 모은 <strong>휘발유 표본 평균</strong>입니다. 전체 지역 평균이나 최저 판매가격을 뜻하지 않습니다.</p><p class="microcopy">표본 원본의 관측일·갱신시각·표본 수는 제공되지 않습니다. 지역 순위를 매기거나 실시간 가격으로 사용하지 않습니다.</p></div><details><summary>{{REGION_COUNT}}개 권역의 표본 가격 펼치기</summary><div class="region-table-wrap"><table><caption>지역 저가 주유소 표본 · 휘발유 · 원천 관측시각 미제공</caption><thead><tr><th scope="col">권역</th><th scope="col">표본 평균(원/L)</th></tr></thead><tbody>{{REGION_ROWS}}</tbody></table></div></details></section>
+
+    <section class="faq-section" aria-labelledby="faq-title"><div><p class="section-kicker">GOOD TO KNOW</p><h2 id="faq-title">주유 전에 궁금한 것들</h2></div><div class="faq-list"><details><summary>국제유가가 내리면 내일 기름값도 내려가나요?</summary><p>바로 같은 폭으로 내려간다고 볼 수 없습니다. 환율, 공급·유통 과정의 시차와 주유소별 판매 정책 등이 국내 가격에 영향을 줍니다. 주유온은 이러한 신호를 참고하되 미래 가격을 확정하지 않습니다.</p></details><details><summary>예상 금액 차이만큼 실제로 절약할 수 있나요?</summary><p>보장하지 않습니다. 전망 비교는 발행 당시 전국 평균 휘발유 모델 가격의 차이에 주유량을 곱한 참고 계산입니다. 실제 방문 주유소의 가격, 주유 시점과 카드 할인에 따라 금액은 달라집니다.</p></details><details><summary>경유·고급휘발유도 미래 가격을 예측하나요?</summary><p>이 페이지의 전망 모델은 휘발유 기준입니다. 경유와 고급휘발유는 저장된 가격과 주유량별 예상 지출을 확인하고, 직접 가격 비교 계산기를 사용할 수 있습니다.</p></details><details><summary>데이터가 오늘 날짜가 아니면 어떻게 하나요?</summary><p>발행 시각을 먼저 확인하세요. 발행 후 48시간이 지난 전망은 금액 비교를 중단합니다. 주유소에서 확인한 가격을 직접 입력하면 데이터 갱신 여부와 관계없이 비교할 수 있습니다.</p></details></div></section>
+
+    <section class="app-cta"><div><p class="section-kicker">YOUR NEXT FUEL STOP</p><h2>주유할 때 생각나는,<br>나만의 가격 메모.</h2><p>가격과 전망을 한곳에서. 주유온 앱으로 이어서 확인하세요.</p></div><a href="download/" class="button button-dark" data-analytics-event="download_page_open" data-platform="selection" data-source="footer_cta">주유온 앱 다운로드 <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer shell"><a class="brand" href="./"><span>주유<span class="brand-on">ON</span></span></a><p>가격을 읽고, 주유를 결정하다.</p><div><a href="guide/" data-analytics-event="guide_open" data-source="footer">데이터·예측 기준</a><a href="privacy/" data-analytics-event="click_privacy_policy" data-source="footer">개인정보처리방침</a><a href="mailto:dnomad.space@gmail.com" data-analytics-event="click_contact" data-source="footer">문의</a></div><small>© 주유온. All rights reserved.</small></footer>
+  <script id="briefing-data" type="application/json">{{DATA}}</script>
+</body>
+</html>

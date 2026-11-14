@@ -1,0 +1,8 @@
+# Reference for the juyuon project, NOT the host's effective robots.txt.
+# Crawlers read https://dnomad-space.github.io/robots.txt at the host root.
+# This repository is served under /juyuon/ and cannot configure that file.
+# Preserve any existing host-level policies when adding the Sitemap there.
+User-agent: *
+Allow: /juyuon/
+
+Sitemap: https://dnomad-space.github.io/juyuon/sitemap.xml
