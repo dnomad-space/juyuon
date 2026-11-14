@@ -1,54 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>주유ON - 가장 스마트한 주유 타이밍</title>
-        <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WDXDZ6TBZ"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-DS93VNJFRN');
-        </script>
-    
-        <script type="text/javascript">
-            function redirectByOS() {
-                const IOS_STORE_URL = "https://apps.apple.com/app/6747162499"; 
-                const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.nomad.juyuon"; 
-                const FALLBACK_URL = "https://dnomad-space.github.io/juyuon"; 
-
-                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                let targetOS = "Desktop or Other";
-
-                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                targetOS = "iOS";
-                
-                gtag('event', 'store_link_click', { 'os_type': 'iOS' });
-                window.location.href = IOS_STORE_URL;
-                return;
-                }
-                
-                if (/android/i.test(userAgent)) {
-                targetOS = "Android";
-                
-                gtag('event', 'store_link_click', { 'os_type': 'Android' });
-                window.location.href = ANDROID_STORE_URL;
-                return;
-                }
-                
-                gtag('event', 'store_link_click', { 'os_type': 'Desktop' });
-                window.location.href = FALLBACK_URL;
-            }
-
-            // 페이지가 로드되자마자 함수 실행
-            redirectByOS();
-        </script>
-    </head>
-    <body>
-    <p>스토어로 이동 중입니다...</p>
-    </body>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주유ON 앱 다운로드 | iPhone·Android 주유 타이밍 확인</title>
+  <meta name="description" content="주유ON을 App Store와 Google Play에서 만나보세요. 국내 유가와 국제유가·환율의 흐름을 살피고 주유 타이밍을 확인하세요.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#fafaf6">
+  <link rel="canonical" href="https://dnomad-space.github.io/juyuon/download/">
+  <link rel="icon" type="image/svg+xml" href="../asset/icon_oil.svg">
+  <link rel="stylesheet" href="../support.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="주유ON">
+  <meta property="og:title" content="주유ON 앱 다운로드">
+  <meta property="og:description" content="국내 유가와 국제유가·환율의 흐름을 앱에서도 확인하세요. App Store와 Google Play에서 만나보세요.">
+  <meta property="og:url" content="https://dnomad-space.github.io/juyuon/download/">
+  <meta property="og:image" content="https://dnomad-space.github.io/juyuon/asset/img_appscreen.png">
+  <meta property="og:image:alt" content="주유ON 모바일 앱 화면">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="../js/analytics.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"SoftwareApplication","@id":"https://dnomad-space.github.io/juyuon/download/#app","name":"주유ON","url":"https://dnomad-space.github.io/juyuon/download/","description":"국내 유가와 국제유가·환율을 살펴 주유 타이밍을 참고할 수 있는 모바일 앱","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android","inLanguage":"ko-KR","installUrl":["https://apps.apple.com/app/6747162499","https://play.google.com/store/apps/details?id=com.nomad.juyuon"]},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"주유ON","item":"https://dnomad-space.github.io/juyuon/"},{"@type":"ListItem","position":2,"name":"앱 다운로드","item":"https://dnomad-space.github.io/juyuon/download/"}]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="support-header support-wrap">
+    <a class="brand" href="../" aria-label="주유ON 홈"><img src="../asset/logo.svg" alt="주유ON" width="88" height="29"></a>
+    <nav class="support-nav" aria-label="주 메뉴"><a class="nav-home" href="../">오늘의 브리핑</a><a href="../guide/" data-analytics-event="guide_open" data-source="download">판단 근거</a><a href="./" aria-current="page">앱 다운로드</a></nav>
+  </header>
+  <main id="main" class="support-wrap">
+    <nav aria-label="현재 위치"><ol class="breadcrumb"><li><a href="../">홈</a></li><li aria-current="page">앱 다운로드</li></ol></nav>
+    <section class="download-hero" aria-labelledby="download-title">
+      <div class="app-mark" aria-hidden="true"><img src="../asset/icon_oil.svg" alt="" width="40" height="40"></div>
+      <p class="eyebrow">JUYUON FOR MOBILE</p>
+      <h1 id="download-title">다음 주유 전,<br>앱에서도 확인하세요.</h1>
+      <p class="support-lead">국내 유가와 시장의 흐름을 살펴보세요.<br>사용하는 기기에 맞는 스토어를 선택하면 됩니다.</p>
+    </section>
+    <div class="store-grid">
+      <section class="store-card" aria-labelledby="ios-title">
+        <p class="store-platform">iOS</p><h2 id="ios-title">iPhone에서</h2><p>App Store에서 주유ON 앱을 확인하세요.</p>
+        <a class="button" href="https://apps.apple.com/app/6747162499" data-analytics-event="store_link_click" data-platform="iOS" data-source="download" aria-label="주유ON App Store로 이동">App Store에서 보기 <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="store-card" aria-labelledby="android-title">
+        <p class="store-platform">ANDROID</p><h2 id="android-title">Android에서</h2><p>Google Play에서 주유ON 앱을 확인하세요.</p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.nomad.juyuon" data-analytics-event="store_link_click" data-platform="Android" data-source="download" aria-label="주유ON Google Play로 이동">Google Play에서 보기 <span aria-hidden="true">↗</span></a>
+      </section>
+    </div>
+    <div class="download-note"><p>지금은 웹에서 둘러보고 싶다면</p><a href="../">오늘의 브리핑 확인하기 →</a><p class="fine-print">앱의 제공 기능과 설치 조건은 각 스토어에서 확인할 수 있습니다.</p></div>
+  </main>
+  <footer class="support-footer support-wrap"><p>© 주유ON</p><nav aria-label="하단 메뉴"><a href="../guide/" data-analytics-event="guide_open" data-source="download">데이터·예측 안내</a><a href="../privacy/" data-analytics-event="click_privacy_policy" data-source="footer">개인정보처리방침</a><a href="mailto:dnomad.space@gmail.com" data-analytics-event="click_contact" data-source="footer">문의하기</a></nav></footer>
+</body>
 </html>

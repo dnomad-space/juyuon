@@ -1,0 +1,718 @@
+{
+  "schema_version": 2,
+  "issued_at": "2026-11-14T09:05:08+09:00",
+  "source_price_date": null,
+  "source": {
+    "publisher": "주유온",
+    "prices_provider": "한국석유공사 오피넷",
+    "prices_provider_url": "https://www.opinet.co.kr/",
+    "update_mode": "static_dated_snapshot",
+    "timezone": "Asia/Seoul",
+    "source_price_date_note": "원본에 유가 관측 기준일이 없어 발행일과 구분합니다."
+  },
+  "prices": {
+    "gasoline": {
+      "label": "휘발유",
+      "price": 1854.89,
+      "change": -0.05,
+      "change_basis": "previous_calendar_day_stored_price",
+      "comparison_date": "2026-11-13",
+      "source_price_date": null,
+      "issued_at": "2026-11-14T09:05:08+09:00",
+      "unit": "KRW/L",
+      "scope": "national_average"
+    },
+    "diesel": {
+      "label": "경유",
+      "price": 1841.1,
+      "change": -0.12,
+      "change_basis": "previous_calendar_day_stored_price",
+      "comparison_date": "2026-11-13",
+      "source_price_date": null,
+      "issued_at": "2026-11-14T09:05:08+09:00",
+      "unit": "KRW/L",
+      "scope": "national_average"
+    },
+    "premium_gasoline": {
+      "label": "고급휘발유",
+      "price": 2375.84,
+      "change": -3.82,
+      "change_basis": "previous_calendar_day_stored_price",
+      "comparison_date": "2026-11-13",
+      "source_price_date": null,
+      "issued_at": "2026-11-14T09:05:08+09:00",
+      "unit": "KRW/L",
+      "scope": "national_average"
+    }
+  },
+  "regional_summaries": [
+    {
+      "code": "01",
+      "name": "서울",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1872.1,
+      "lowest_five_mean": 1810.2,
+      "gap_to_lowest_five_mean": 61.9,
+      "reported_change": -0.2,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "02",
+      "name": "경기",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1819.7,
+      "lowest_five_mean": 1781.0,
+      "gap_to_lowest_five_mean": 38.7,
+      "reported_change": -0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "03",
+      "name": "강원",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1853.4,
+      "lowest_five_mean": 1796.4,
+      "gap_to_lowest_five_mean": 57.0,
+      "reported_change": -0.1,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "04",
+      "name": "충북",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1831.6,
+      "lowest_five_mean": 1802.0,
+      "gap_to_lowest_five_mean": 29.6,
+      "reported_change": 0.3,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "05",
+      "name": "충남",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1828.8,
+      "lowest_five_mean": 1791.0,
+      "gap_to_lowest_five_mean": 37.8,
+      "reported_change": 0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "06",
+      "name": "전북",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1833.3,
+      "lowest_five_mean": 1787.4,
+      "gap_to_lowest_five_mean": 45.9,
+      "reported_change": 0.5,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "08",
+      "name": "경북",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1828.7,
+      "lowest_five_mean": 1777.2,
+      "gap_to_lowest_five_mean": 51.5,
+      "reported_change": 0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "09",
+      "name": "경남",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1822.0,
+      "lowest_five_mean": 1773.0,
+      "gap_to_lowest_five_mean": 49.0,
+      "reported_change": -0.4,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "10",
+      "name": "부산",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1822.0,
+      "lowest_five_mean": 1793.0,
+      "gap_to_lowest_five_mean": 29.0,
+      "reported_change": -0.4,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "11",
+      "name": "제주",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1850.0,
+      "lowest_five_mean": 1821.4,
+      "gap_to_lowest_five_mean": 28.5,
+      "reported_change": -1.6,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "14",
+      "name": "대구",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1803.9,
+      "lowest_five_mean": 1785.2,
+      "gap_to_lowest_five_mean": 18.7,
+      "reported_change": 0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "15",
+      "name": "인천",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1831.8,
+      "lowest_five_mean": 1796.6,
+      "gap_to_lowest_five_mean": 35.2,
+      "reported_change": 0.5,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "17",
+      "name": "대전",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1806.0,
+      "lowest_five_mean": 1798.6,
+      "gap_to_lowest_five_mean": 7.4,
+      "reported_change": 0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "18",
+      "name": "울산",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1808.4,
+      "lowest_five_mean": 1789.0,
+      "gap_to_lowest_five_mean": 19.4,
+      "reported_change": -0.1,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "19",
+      "name": "세종",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1818.8,
+      "lowest_five_mean": 1815.0,
+      "gap_to_lowest_five_mean": 3.8,
+      "reported_change": 0.0,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    },
+    {
+      "code": "20",
+      "name": "전남광주",
+      "fuel_type": "gasoline",
+      "fuel_label": "휘발유",
+      "opinet_product_code": "B027",
+      "price": 1841.3,
+      "lowest_five_mean": 1794.0,
+      "gap_to_lowest_five_mean": 47.3,
+      "reported_change": 0.4,
+      "change_basis": "comparison_period_not_provided",
+      "comparison_date": null,
+      "comparison_days": null,
+      "source_price_date": null,
+      "issued_at": null,
+      "sample_scope": "district_lowest_up_to_10",
+      "sample_scope_label": "시군구별 저가 주유소 최대 10곳을 모은 표본",
+      "sample_size": null,
+      "unit": "KRW/L"
+    }
+  ],
+  "regional_scope_note": "지역별 저가 주유소 표본 평균(휘발유)이며 전체 주유소의 지역 평균이 아닙니다. 관측일·발행시각이 없는 원본 행은 시각을 추정하지 않습니다.",
+  "history": {
+    "fuel_type": "gasoline",
+    "scope": "national_average",
+    "unit": "KRW/L",
+    "date_basis": "publication_date",
+    "period_days": 30,
+    "missing_data_policy": "null_without_interpolation",
+    "points": [
+      {
+        "date": "2026-10-16",
+        "price": 1856.42,
+        "issued_at": "2026-10-16T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-17",
+        "price": 1856.44,
+        "issued_at": "2026-10-17T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-18",
+        "price": 1856.38,
+        "issued_at": "2026-10-18T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-19",
+        "price": 1856.24,
+        "issued_at": "2026-10-19T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-20",
+        "price": 1856.01,
+        "issued_at": "2026-10-20T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-21",
+        "price": 1855.94,
+        "issued_at": "2026-10-21T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-22",
+        "price": 1855.85,
+        "issued_at": "2026-10-22T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-23",
+        "price": 1855.92,
+        "issued_at": "2026-10-23T09:06:52+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-24",
+        "price": 1855.85,
+        "issued_at": "2026-10-24T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-25",
+        "price": null,
+        "issued_at": null,
+        "source_price_date": null,
+        "status": "missing_snapshot"
+      },
+      {
+        "date": "2026-10-26",
+        "price": 1855.68,
+        "issued_at": "2026-10-26T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-27",
+        "price": 1855.65,
+        "issued_at": "2026-10-27T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-28",
+        "price": 1855.51,
+        "issued_at": "2026-10-28T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-29",
+        "price": 1855.47,
+        "issued_at": "2026-10-29T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-30",
+        "price": 1855.61,
+        "issued_at": "2026-10-30T09:05:07+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-10-31",
+        "price": 1855.55,
+        "issued_at": "2026-10-31T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-01",
+        "price": 1855.66,
+        "issued_at": "2026-11-01T09:06:21+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-02",
+        "price": null,
+        "issued_at": null,
+        "source_price_date": null,
+        "status": "missing_snapshot"
+      },
+      {
+        "date": "2026-11-03",
+        "price": 1855.39,
+        "issued_at": "2026-11-03T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-04",
+        "price": 1855.27,
+        "issued_at": "2026-11-04T09:05:07+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-05",
+        "price": 1855.23,
+        "issued_at": "2026-11-05T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-06",
+        "price": 1855.33,
+        "issued_at": "2026-11-06T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-07",
+        "price": 1855.33,
+        "issued_at": "2026-11-07T09:05:07+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-08",
+        "price": 1855.33,
+        "issued_at": "2026-11-08T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-09",
+        "price": 1855.23,
+        "issued_at": "2026-11-09T09:05:05+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-10",
+        "price": 1855.06,
+        "issued_at": "2026-11-10T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-11",
+        "price": 1855.03,
+        "issued_at": "2026-11-11T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-12",
+        "price": 1854.94,
+        "issued_at": "2026-11-12T09:05:07+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-13",
+        "price": 1854.94,
+        "issued_at": "2026-11-13T09:05:09+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      },
+      {
+        "date": "2026-11-14",
+        "price": 1854.89,
+        "issued_at": "2026-11-14T09:05:08+09:00",
+        "source_price_date": null,
+        "status": "observed"
+      }
+    ]
+  },
+  "forecast": {
+    "fuel_type": "gasoline",
+    "scope": "national_average",
+    "unit": "KRW/L",
+    "issued_at": "2026-11-14T09:05:08+09:00",
+    "baseline_date": "2026-11-14",
+    "model_baseline_price": 1854.9,
+    "status": "published_reference_scenario",
+    "points": [
+      {
+        "day": 0,
+        "date": "2026-11-14",
+        "price": 1854.9,
+        "kind": "model_baseline"
+      },
+      {
+        "day": 1,
+        "date": "2026-11-15",
+        "price": 1855.9,
+        "kind": "forecast"
+      },
+      {
+        "day": 2,
+        "date": "2026-11-16",
+        "price": 1856.8,
+        "kind": "forecast"
+      },
+      {
+        "day": 3,
+        "date": "2026-11-17",
+        "price": 1857.7,
+        "kind": "forecast"
+      },
+      {
+        "day": 4,
+        "date": "2026-11-18",
+        "price": 1858.4,
+        "kind": "forecast"
+      },
+      {
+        "day": 5,
+        "date": "2026-11-19",
+        "price": 1859.2,
+        "kind": "forecast"
+      },
+      {
+        "day": 6,
+        "date": "2026-11-20",
+        "price": 1859.8,
+        "kind": "forecast"
+      },
+      {
+        "day": 7,
+        "date": "2026-11-21",
+        "price": 1860.4,
+        "kind": "forecast"
+      },
+      {
+        "day": 8,
+        "date": "2026-11-22",
+        "price": 1857.9,
+        "kind": "forecast"
+      },
+      {
+        "day": 9,
+        "date": "2026-11-23",
+        "price": 1854.9,
+        "kind": "forecast"
+      },
+      {
+        "day": 10,
+        "date": "2026-11-24",
+        "price": 1851.7,
+        "kind": "forecast"
+      },
+      {
+        "day": 11,
+        "date": "2026-11-25",
+        "price": 1848.0,
+        "kind": "forecast"
+      },
+      {
+        "day": 12,
+        "date": "2026-11-26",
+        "price": 1844.0,
+        "kind": "forecast"
+      },
+      {
+        "day": 13,
+        "date": "2026-11-27",
+        "price": 1839.6,
+        "kind": "forecast"
+      },
+      {
+        "day": 14,
+        "date": "2026-11-28",
+        "price": 1834.9,
+        "kind": "forecast"
+      }
+    ],
+    "horizons": {
+      "7": {
+        "date": "2026-11-21",
+        "days": 7,
+        "price": 1860.4,
+        "change_from_model_baseline": 5.5
+      },
+      "14": {
+        "date": "2026-11-28",
+        "days": 14,
+        "price": 1834.9,
+        "change_from_model_baseline": -20.0
+      }
+    },
+    "interpretation": "실제 관측 가격이 아닌 발행 당시 모델의 참고 시나리오입니다. 미래 가격과 절약을 보장하지 않습니다."
+  },
+  "validation": {
+    "methodology": "발행 당시 예측을 동일한 유종·범위의 목표 날짜 관측값과 비교하고 현재 가격 유지 기준선과 함께 검토합니다.",
+    "score_interpretation": "모델 내부 신뢰도와 방향 점수는 검증된 적중률이나 미래 발생확률이 아닙니다.",
+    "missing_data_policy": "관측 누락·예측 기간 불일치는 임의 보간하거나 같은 기간으로 취급하지 않습니다.",
+    "comparison_caveats": [
+      "전국 평균 전망은 개별 주유소의 미래 가격과 다를 수 있습니다.",
+      "발행 시각과 원천 가격 관측 시각은 서로 다릅니다.",
+      "지역 저가 주유소 표본은 전체 지역 주유소를 대표하지 않습니다.",
+      "시점별 저가 표본의 구성이 달라질 수 있어 표본 평균 차이를 같은 주유소의 가격 변화나 인과관계로 해석하지 않습니다."
+    ]
+  }
+}

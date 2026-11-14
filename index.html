@@ -1,130 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주유ON - 가장 스마트한 주유 타이밍</title>
-    <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="style.css">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS93VNJFRN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-DS93VNJFRN');
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4CD39">
+  <title>주유온 2.0 | 주유 타이밍과 주유비 비교</title>
+  <meta name="description" content="전국 휘발유·경유·고급휘발유 가격과 발행 당시 유가 전망을 확인하세요. 내 주유량에 따른 금액 차이, 추가 이동비를 반영한 주유소 가격 비교를 주유온에서 할 수 있습니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://dnomad-space.github.io/juyuon/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="주유온">
+  <meta property="og:title" content="주유온 2.0 — 오늘 넣을까, 조금 기다릴까?">
+  <meta property="og:description" content="주유 전, 가격과 근거부터. 내 주유량으로 금액 차이를 확인하고 오늘의 주유를 결정하세요.">
+  <meta property="og:url" content="https://dnomad-space.github.io/juyuon/">
+  <meta property="og:image" content="https://dnomad-space.github.io/juyuon/asset/img_appscreen.png">
+  <meta property="og:image:alt" content="주유온 앱의 주유 타이밍 안내 화면">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="asset/icon_oil.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/app.js" type="module"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://dnomad-space.github.io/juyuon/#website","url":"https://dnomad-space.github.io/juyuon/","name":"주유온","alternateName":"주유ON","inLanguage":"ko-KR","description":"유가 정보와 주유 타이밍 참고 전망, 주유비 비교 계산을 제공하는 서비스"},{"@type":"WebPage","@id":"https://dnomad-space.github.io/juyuon/#webpage","url":"https://dnomad-space.github.io/juyuon/","name":"주유온 2.0 | 주유 타이밍과 주유비 비교","inLanguage":"ko-KR","isPartOf":{"@id":"https://dnomad-space.github.io/juyuon/#website"},"about":{"@type":"Thing","name":"주유비와 유가 정보"}},{"@type":"WebApplication","@id":"https://dnomad-space.github.io/juyuon/#calculator","name":"주유온 주유비 비교 계산기","url":"https://dnomad-space.github.io/juyuon/#compare","applicationCategory":"UtilitiesApplication","operatingSystem":"웹 브라우저","inLanguage":"ko-KR","description":"사용자가 입력한 두 주유소 가격, 주유량, 추가 이동거리와 연비로 예상 비용을 비교합니다.","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}]}</script>
 </head>
 <body>
-    <header class="header container">
-        <img class="logo" src="asset/logo.svg" alt="주유ON 로고" />
-        <!-- <a href="#" class="btn btn-primary download-button">앱 다운로드</a> -->
-    </header>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header shell">
+    <a class="brand" href="./" aria-label="주유온 홈"><img src="asset/icon_oil.svg" width="27" height="29" alt=""><span>주유<span class="brand-on">ON</span></span><span class="version">2.0</span></a>
+    <nav aria-label="주 메뉴"><a href="#briefing">유가 브리핑</a><a href="#compare">주유비 비교</a><a href="guide/" data-analytics-event="guide_open" data-source="header">데이터·예측 기준</a></nav>
+    <a class="button button-dark header-download" href="download/" data-analytics-event="download_page_open" data-platform="selection" data-source="header">앱으로 만나기 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> 주유 전, 가격과 근거부터</p><h1 id="hero-title">오늘 넣을까,<br><span class="highlight">조금 기다릴까?</span></h1><p class="hero-description">리터당 가격을 내 주유비로 바꿔 보세요.<br>지금의 가격과 앞으로의 전망을 구분해,<br class="mobile-only"> 주유할 때의 고민을 덜어드립니다.</p></div>
+      <div class="hero-note"><span class="note-index">THE FUEL NOTE / 02</span><div class="note-glyph" aria-hidden="true"><img src="asset/icon_oil.svg" width="66" height="73" alt=""><span>↘</span></div><p>작은 가격 차이도<br><strong>내가 넣을 만큼, 정확하게.</strong></p><a href="#compare">내 주유비 계산하기 <span aria-hidden="true">↗</span></a></div>
+    </section>
 
-    <main>
-        <section class="hero container">
-            <h1>가장 스마트한 <span>주유 타이밍.</span><br>AI가 알려드려요.</h1>
-            <!-- <a href="#" class="btn btn-primary btn-stores download-button">App Store / Google Play</a> -->
-            <div class="image-placeholder hero-image"></div>
-        </section>
-        
-        <section class="features container">
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>AI 기반 최적 주유 시기 예측.</h3>
-                    <p>AI가 국제 유가와 환율을 분석해 다음 주 유가를 예측하고, 앱으로 최적의 타이밍을 안내합니다.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>명확한 유가 시장 분석 & 전망</h3>
-                    <p>미래 유가 흐름을 예측해, 더욱 현명한 주유소비를 할 수 있도록 도와드립니다.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>주요 뉴스 요약.</h3>
-                    <p>국내외 주요 유가 뉴스만 매일 요약해서 제공합니다.</p>
-                </div>
-            </div>
-        </section>
+    <section id="briefing" class="briefing-section" aria-labelledby="briefing-title">
+      <div class="section-heading"><div><p class="section-kicker">01 / FUEL BRIEFING</p><h2 id="briefing-title">숫자로 보는 주유 타이밍</h2></div><div class="issue"><span id="freshness-badge" class="status-pill">날짜가 명시된 발행본</span><time id="issued-at" datetime="2026-11-14T09:05:08+09:00">2026. 11. 14. 09:05 KST 발행</time></div></div>
+      <p id="data-notice" class="data-notice">이 페이지는 발행 시점의 데이터를 담고 있습니다. 가격의 원천 관측 시각은 제공되지 않아 발행 시각과 구분합니다.</p>
+      <div class="briefing-grid">
+        <article class="market-card panel">
+          <div class="market-top"><div class="fuel-tabs" role="group" aria-label="비교할 유종"><button type="button" class="active" data-fuel="gasoline" aria-pressed="true">휘발유</button><button type="button" data-fuel="diesel" aria-pressed="false">경유</button><button type="button" data-fuel="premium_gasoline" aria-pressed="false">고급유</button></div><span class="unit-label">전국 평균 · 원/L</span></div>
+          <div class="market-price"><strong id="current-price">1,854.89</strong><span>원/L</span></div>
+          <p id="price-change" class="price-change">↘ 0.05원 · 11.13 저장값 대비</p>
+          <div id="price-chart"><svg viewBox="0 0 720 246" role="img" aria-label="휘발유 전국 평균, 발행일별 저장 가격. 원천 관측시각은 제공되지 않습니다." class="price-chart"><title>발행본에 담긴 휘발유 가격 흐름</title><line x1="12" y1="206" x2="652" y2="206" stroke="#E8E9E4"/><text x="664" y="210" fill="#7F827B" font-size="12">1,850</text><line x1="12" y1="113" x2="652" y2="113" stroke="#E8E9E4"/><text x="664" y="117" fill="#7F827B" font-size="12">1,855</text><line x1="12" y1="20" x2="652" y2="20" stroke="#E8E9E4"/><text x="664" y="24" fill="#7F827B" font-size="12">1,861</text><path d="M12.00 106.35" fill="none" stroke="#242D29" stroke-width="2.5"/><path d="M110.46 111.01 L159.69 113.09 L208.92 113.78 L258.15 112.05 L307.38 112.05 L356.62 112.05 L405.85 113.78 L455.08 116.71 L504.31 117.23 L553.54 118.79 L602.77 118.79 L652.00 119.65" fill="none" stroke="#242D29" stroke-width="2.5"/><circle cx="652" cy="119.64902506963773" r="5" fill="#242D29" stroke="#fff" stroke-width="3"/><text x="12" y="236" fill="#7F827B" font-size="12">11.1</text><text x="652" y="236" fill="#384238" font-size="12" text-anchor="end">11.14 발행</text></svg></div>
+          <div class="chart-footer"><span><i class="legend-line" aria-hidden="true"></i> 발행본에 담긴 가격</span><label class="forecast-toggle"><input id="show-forecast" type="checkbox"><span>발행 당시 전망 함께 보기</span></label></div>
+          <p class="microcopy" id="chart-note">휘발유 전국 평균의 발행일별 저장값입니다. 관측 누락은 선으로 연결하지 않습니다.</p>
+          <details class="price-table"><summary>유종별 가격을 표로 보기</summary><table><caption>2026. 11. 14. 09:05 발행본 · 원천 관측시각 미제공</caption><thead><tr><th scope="col">유종</th><th scope="col">가격(원/L)</th><th scope="col">이전 저장값 대비(원/L)</th></tr></thead><tbody><tr><th scope="row">휘발유</th><td>1,854.89</td><td>-0.05</td></tr><tr><th scope="row">경유</th><td>1,841.10</td><td>-0.12</td></tr><tr><th scope="row">고급휘발유</th><td>2,375.84</td><td>-3.82</td></tr></tbody></table></details>
+        </article>
 
-        <!-- <section class="final-cta container">
-            <h2>지금 바로 다운로드하고, 주유비를 아껴보세요!</h2>
-            <p>앱스토어와 구글플레이에서 만나보세요.</p>
-            <a href="#" class="btn btn-primary download-button">다운로드</a>
-        </section> -->
-    </main>
+        <article class="decision-card panel" aria-labelledby="decision-title">
+          <div class="card-label"><span class="tiny-square" aria-hidden="true"></span> MY FUEL PLAN</div><h3 id="decision-title">내가 넣을 양으로<br>비교해 보세요.</h3>
+          <div class="volume-row"><span>이번에 넣을 양</span><div class="volume-options" role="group" aria-label="주유량"><button type="button" data-liters="20" aria-pressed="false">20L</button><button type="button" data-liters="40" aria-pressed="true" class="active">40L</button><button type="button" data-liters="60" aria-pressed="false">60L</button></div></div>
+          <div class="cost-line"><span id="cost-label">발행본 가격으로 40L 주유하면</span><strong id="estimated-cost">{{COST_40}}<small>원</small></strong></div>
+          <div id="forecast-comparison" class="forecast-comparison" aria-live="polite"><p class="forecast-intro">전망 비교는 데이터 시각을 확인한 뒤 표시됩니다.</p></div>
+          <p class="decision-caption" id="decision-caption">전망은 참고 시나리오입니다. 필요한 주유를 미루기보다 금액 차이와 실제 주행 계획을 함께 확인하세요.</p>
+          <a class="text-link" href="guide/#forecast" data-analytics-event="guide_open" data-source="decision">전망의 근거와 한계 보기 <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <div class="source-line"><span>가격 출처 <a href="https://www.opinet.co.kr/" target="_blank" rel="noopener noreferrer" data-analytics-event="data_source_open" data-source="opinet">한국석유공사 오피넷 ↗</a></span><span>분석·발행 주유온 · 개별 주유소의 판매가격과 다를 수 있습니다.</span></div>
+    </section>
 
-    <footer class="footer container">
-        <div class="footer-text">
-            Copyright ⓒ 주유ON. All right reserved.
-        </div>
-        <div class="footer-links">
-            <a href="mailto:dnomad.space@gmail.com" id="contact-link">문의하기</a>
-            <a href="https://dnomad-space.github.io/juyuon/privacy/" target="_blank" id="privacy-policy-link">개인정보처리방침</a>
-        </div>
-    </footer>
+    <section id="compare" class="compare-section" aria-labelledby="compare-title">
+      <div class="compare-heading"><p class="section-kicker">02 / REAL-WORLD SAVINGS</p><h2 id="compare-title">조금 더 싼 곳,<br>찾아갈 만큼 이득일까?</h2><p>두 주유소의 가격을 넣어 보세요.<br>추가로 달리는 데 쓰는 연료비까지<br>함께 계산할 수 있습니다.</p><span class="outline-chip">로그인 없이 · 입력값은 기기 안에서 계산</span></div>
+      <form id="station-compare" class="compare-form panel">
+        <div class="input-grid"><label for="first-price">가까운 주유소<span class="input-unit"><input id="first-price" name="firstPrice" inputmode="decimal" type="number" step="0.01" min="1" max="10000" required placeholder="리터당 가격"><span>원/L</span></span></label><label for="second-price">비교할 주유소<span class="input-unit"><input id="second-price" name="secondPrice" inputmode="decimal" type="number" step="0.01" min="1" max="10000" required placeholder="리터당 가격"><span>원/L</span></span></label></div>
+        <label class="amount-label" for="compare-liters">주유량<span class="input-unit small-input"><input id="compare-liters" name="liters" inputmode="decimal" type="number" step="0.1" min="1" max="200" value="40" required><span>L</span></span></label>
+        <details class="detour-options"><summary>추가 이동에 드는 연료비도 반영하기 <span aria-hidden="true">＋</span></summary><div class="input-grid"><label for="extra-km">추가 왕복 이동거리<span class="input-unit"><input id="extra-km" name="extraKm" inputmode="decimal" type="number" step="0.1" min="0" max="1000" value="0"><span>km</span></span></label><label for="efficiency">내 차 실제 연비<span class="input-unit"><input id="efficiency" name="efficiency" inputmode="decimal" type="number" step="0.1" min="0.1" max="100" placeholder="예: 12"><span>km/L</span></span></label></div><p class="microcopy">평소 경로보다 추가로 달리는 왕복 거리입니다. 실제 경로를 조회하지 않으며 통행료·시간·카드 할인은 포함하지 않습니다.</p></details>
+        <button type="submit" class="button button-dark compare-button">금액 차이 확인하기 <span aria-hidden="true">↗</span></button><div id="compare-result" class="compare-result" role="status" aria-live="polite"><span class="microcopy">입력한 가격과 주유량으로 예상 금액 차이를 계산합니다.</span></div>
+        <noscript><p>직접 비교 계산은 JavaScript가 필요합니다. 계산식: (가까운 곳 가격 − 비교할 곳 가격) × 주유량 − 추가 거리 ÷ 연비 × 가까운 곳 가격.</p></noscript>
+      </form>
+    </section>
 
-    <div id="modal-overlay" class="modal-overlay">
-        <div id="modal-content" class="modal-content">
-            <h2>🚀 출시 준비 중</h2>
-            <p>현재 앱 출시를 위해 준비 단계에 있습니다.<br>조금만 기다려주시면 곧 만나보실 수 있어요!</p>
-            <button id="modal-close-btn" class="btn btn-primary">확인</button>
-        </div>
-    </div>
+    <section class="evidence-section" aria-labelledby="evidence-title"><div class="section-heading"><div><p class="section-kicker">03 / READ THE EVIDENCE</p><h2 id="evidence-title">숫자 뒤의 기준도, 숨김없이.</h2></div><a href="guide/" class="text-link" data-analytics-event="guide_open" data-source="evidence">데이터·예측 기준 ↗</a></div><div class="evidence-grid"><article><span class="evidence-number">01</span><h3>가격과 전망을 구분합니다</h3><p>전국 평균과 개별 주유소 가격은 다릅니다. 모델의 미래 가격은 관측값과 별도로 표시합니다.</p></article><article><span class="evidence-number">02</span><h3>점수를 적중률로 바꾸지 않습니다</h3><p>모델의 일치도는 검증된 성공 확률이 아닙니다. 없는 관측값이나 오차 범위를 만들어 보여주지 않습니다.</p></article><article><span class="evidence-number">03</span><h3>오래된 전망은 멈춥니다</h3><p>발행 후 48시간이 지나면 예상 금액 비교를 중단합니다. 직접 입력하는 주유소 비교는 계속 사용할 수 있습니다.</p></article></div></section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const downloadButtons = document.querySelectorAll('.download-button');
-            const modalOverlay = document.getElementById('modal-overlay');
-            const modalCloseBtn = document.getElementById('modal-close-btn');
-            const contactLink = document.getElementById('contact-link');
-            const privacyPolicyLink = document.getElementById('privacy-policy-link');
+    <section class="regional-section panel" aria-labelledby="regional-title"><div class="regional-intro"><p class="section-kicker">LOCAL PRICE SAMPLES</p><h2 id="regional-title">지역별 저가 주유소 표본</h2><p>시군구별 저가 주유소 최대 10곳을 모은 <strong>휘발유 표본 평균</strong>입니다. 전체 지역 평균이나 최저 판매가격을 뜻하지 않습니다.</p><p class="microcopy">표본 원본의 관측일·갱신시각·표본 수는 제공되지 않습니다. 지역 순위를 매기거나 실시간 가격으로 사용하지 않습니다.</p></div><details><summary>16개 권역의 표본 가격 펼치기</summary><div class="region-table-wrap"><table><caption>지역 저가 주유소 표본 · 휘발유 · 원천 관측시각 미제공</caption><thead><tr><th scope="col">권역</th><th scope="col">표본 평균(원/L)</th></tr></thead><tbody><tr><th scope="row">서울</th><td>1,872.10</td></tr><tr><th scope="row">경기</th><td>1,819.70</td></tr><tr><th scope="row">강원</th><td>1,853.40</td></tr><tr><th scope="row">충북</th><td>1,831.60</td></tr><tr><th scope="row">충남</th><td>1,828.80</td></tr><tr><th scope="row">전북</th><td>1,833.30</td></tr><tr><th scope="row">경북</th><td>1,828.70</td></tr><tr><th scope="row">경남</th><td>1,822.00</td></tr><tr><th scope="row">부산</th><td>1,822.00</td></tr><tr><th scope="row">제주</th><td>1,850.00</td></tr><tr><th scope="row">대구</th><td>1,803.90</td></tr><tr><th scope="row">인천</th><td>1,831.80</td></tr><tr><th scope="row">대전</th><td>1,806.00</td></tr><tr><th scope="row">울산</th><td>1,808.40</td></tr><tr><th scope="row">세종</th><td>1,818.80</td></tr><tr><th scope="row">전남광주</th><td>1,841.30</td></tr></tbody></table></div></details></section>
 
-            const openModal = () => {
-                modalOverlay.style.display = 'flex';
-                setTimeout(() => {
-                    modalOverlay.classList.add('show');
-                }, 10);
-            };
+    <section class="faq-section" aria-labelledby="faq-title"><div><p class="section-kicker">GOOD TO KNOW</p><h2 id="faq-title">주유 전에 궁금한 것들</h2></div><div class="faq-list"><details><summary>국제유가가 내리면 내일 기름값도 내려가나요?</summary><p>바로 같은 폭으로 내려간다고 볼 수 없습니다. 환율, 공급·유통 과정의 시차와 주유소별 판매 정책 등이 국내 가격에 영향을 줍니다. 주유온은 이러한 신호를 참고하되 미래 가격을 확정하지 않습니다.</p></details><details><summary>예상 금액 차이만큼 실제로 절약할 수 있나요?</summary><p>보장하지 않습니다. 전망 비교는 발행 당시 전국 평균 휘발유 모델 가격의 차이에 주유량을 곱한 참고 계산입니다. 실제 방문 주유소의 가격, 주유 시점과 카드 할인에 따라 금액은 달라집니다.</p></details><details><summary>경유·고급휘발유도 미래 가격을 예측하나요?</summary><p>이 페이지의 전망 모델은 휘발유 기준입니다. 경유와 고급휘발유는 저장된 가격과 주유량별 예상 지출을 확인하고, 직접 가격 비교 계산기를 사용할 수 있습니다.</p></details><details><summary>데이터가 오늘 날짜가 아니면 어떻게 하나요?</summary><p>발행 시각을 먼저 확인하세요. 발행 후 48시간이 지난 전망은 금액 비교를 중단합니다. 주유소에서 확인한 가격을 직접 입력하면 데이터 갱신 여부와 관계없이 비교할 수 있습니다.</p></details></div></section>
 
-            const closeModal = () => {
-                modalOverlay.classList.remove('show');
-                setTimeout(() => {
-                    modalOverlay.style.display = 'none';
-                }, 300); 
-            };
-
-            downloadButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault(); 
-                    gtag('event', 'click_download_cta');
-                    openModal();
-                });
-            });
-
-            modalCloseBtn.addEventListener('click', () => {
-                gtag('event', 'close_launch_modal');
-                closeModal();
-            });
-
-            modalOverlay.addEventListener('click', (e) => {
-                if (e.target === modalOverlay) {
-                    closeModal();
-                }
-            });
-
-            if (contactLink) {
-                contactLink.addEventListener('click', () => {
-                    gtag('event', 'click_contact');
-                });
-            }
-
-            if (privacyPolicyLink) {
-                privacyPolicyLink.addEventListener('click', () => {
-                    gtag('event', 'click_privacy_policy');
-                });
-            }
-        });
-    </script>
+    <section class="app-cta"><div><p class="section-kicker">YOUR NEXT FUEL STOP</p><h2>주유할 때 생각나는,<br>나만의 가격 메모.</h2><p>가격과 전망을 한곳에서. 주유온 앱으로 이어서 확인하세요.</p></div><a href="download/" class="button button-dark" data-analytics-event="download_page_open" data-platform="selection" data-source="footer_cta">주유온 앱 다운로드 <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer shell"><a class="brand" href="./"><span>주유<span class="brand-on">ON</span></span></a><p>가격을 읽고, 주유를 결정하다.</p><div><a href="guide/" data-analytics-event="guide_open" data-source="footer">데이터·예측 기준</a><a href="privacy/" data-analytics-event="click_privacy_policy" data-source="footer">개인정보처리방침</a><a href="mailto:dnomad.space@gmail.com" data-analytics-event="click_contact" data-source="footer">문의</a></div><small>© 주유온. All rights reserved.</small></footer>
+  <script id="briefing-data" type="application/json">{"schema_version":2,"issued_at":"2026-11-14T09:05:08+09:00","source_price_date":null,"source":{"publisher":"주유온","prices_provider":"한국석유공사 오피넷","prices_provider_url":"https://www.opinet.co.kr/","update_mode":"static_dated_snapshot","timezone":"Asia/Seoul","source_price_date_note":"원본에 유가 관측 기준일이 없어 발행일과 구분합니다."},"prices":{"gasoline":{"label":"휘발유","price":1854.89,"change":-0.05,"change_basis":"previous_calendar_day_stored_price","comparison_date":"2026-11-13","source_price_date":null,"issued_at":"2026-11-14T09:05:08+09:00","unit":"KRW/L","scope":"national_average"},"diesel":{"label":"경유","price":1841.1,"change":-0.12,"change_basis":"previous_calendar_day_stored_price","comparison_date":"2026-11-13","source_price_date":null,"issued_at":"2026-11-14T09:05:08+09:00","unit":"KRW/L","scope":"national_average"},"premium_gasoline":{"label":"고급휘발유","price":2375.84,"change":-3.82,"change_basis":"previous_calendar_day_stored_price","comparison_date":"2026-11-13","source_price_date":null,"issued_at":"2026-11-14T09:05:08+09:00","unit":"KRW/L","scope":"national_average"}},"regional_summaries":[{"code":"01","name":"서울","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1872.1,"lowest_five_mean":1810.2,"gap_to_lowest_five_mean":61.9,"reported_change":-0.2,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"02","name":"경기","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1819.7,"lowest_five_mean":1781,"gap_to_lowest_five_mean":38.7,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"03","name":"강원","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1853.4,"lowest_five_mean":1796.4,"gap_to_lowest_five_mean":57,"reported_change":-0.1,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"04","name":"충북","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1831.6,"lowest_five_mean":1802,"gap_to_lowest_five_mean":29.6,"reported_change":0.3,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"05","name":"충남","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1828.8,"lowest_five_mean":1791,"gap_to_lowest_five_mean":37.8,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"06","name":"전북","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1833.3,"lowest_five_mean":1787.4,"gap_to_lowest_five_mean":45.9,"reported_change":0.5,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"08","name":"경북","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1828.7,"lowest_five_mean":1777.2,"gap_to_lowest_five_mean":51.5,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"09","name":"경남","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1822,"lowest_five_mean":1773,"gap_to_lowest_five_mean":49,"reported_change":-0.4,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"10","name":"부산","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1822,"lowest_five_mean":1793,"gap_to_lowest_five_mean":29,"reported_change":-0.4,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"11","name":"제주","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1850,"lowest_five_mean":1821.4,"gap_to_lowest_five_mean":28.5,"reported_change":-1.6,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"14","name":"대구","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1803.9,"lowest_five_mean":1785.2,"gap_to_lowest_five_mean":18.7,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"15","name":"인천","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1831.8,"lowest_five_mean":1796.6,"gap_to_lowest_five_mean":35.2,"reported_change":0.5,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"17","name":"대전","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1806,"lowest_five_mean":1798.6,"gap_to_lowest_five_mean":7.4,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"18","name":"울산","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1808.4,"lowest_five_mean":1789,"gap_to_lowest_five_mean":19.4,"reported_change":-0.1,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"19","name":"세종","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1818.8,"lowest_five_mean":1815,"gap_to_lowest_five_mean":3.8,"reported_change":0,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"},{"code":"20","name":"전남광주","fuel_type":"gasoline","fuel_label":"휘발유","opinet_product_code":"B027","price":1841.3,"lowest_five_mean":1794,"gap_to_lowest_five_mean":47.3,"reported_change":0.4,"change_basis":"comparison_period_not_provided","comparison_date":null,"comparison_days":null,"source_price_date":null,"issued_at":null,"sample_scope":"district_lowest_up_to_10","sample_scope_label":"시군구별 저가 주유소 최대 10곳을 모은 표본","sample_size":null,"unit":"KRW/L"}],"regional_scope_note":"지역별 저가 주유소 표본 평균(휘발유)이며 전체 주유소의 지역 평균이 아닙니다. 관측일·발행시각이 없는 원본 행은 시각을 추정하지 않습니다.","history":{"fuel_type":"gasoline","scope":"national_average","unit":"KRW/L","date_basis":"publication_date","period_days":30,"missing_data_policy":"null_without_interpolation","points":[{"date":"2026-10-16","price":1856.42,"issued_at":"2026-10-16T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-17","price":1856.44,"issued_at":"2026-10-17T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-18","price":1856.38,"issued_at":"2026-10-18T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-19","price":1856.24,"issued_at":"2026-10-19T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-20","price":1856.01,"issued_at":"2026-10-20T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-21","price":1855.94,"issued_at":"2026-10-21T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-22","price":1855.85,"issued_at":"2026-10-22T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-23","price":1855.92,"issued_at":"2026-10-23T09:06:52+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-24","price":1855.85,"issued_at":"2026-10-24T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-25","price":null,"issued_at":null,"source_price_date":null,"status":"missing_snapshot"},{"date":"2026-10-26","price":1855.68,"issued_at":"2026-10-26T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-27","price":1855.65,"issued_at":"2026-10-27T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-28","price":1855.51,"issued_at":"2026-10-28T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-29","price":1855.47,"issued_at":"2026-10-29T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-30","price":1855.61,"issued_at":"2026-10-30T09:05:07+09:00","source_price_date":null,"status":"observed"},{"date":"2026-10-31","price":1855.55,"issued_at":"2026-10-31T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-01","price":1855.66,"issued_at":"2026-11-01T09:06:21+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-02","price":null,"issued_at":null,"source_price_date":null,"status":"missing_snapshot"},{"date":"2026-11-03","price":1855.39,"issued_at":"2026-11-03T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-04","price":1855.27,"issued_at":"2026-11-04T09:05:07+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-05","price":1855.23,"issued_at":"2026-11-05T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-06","price":1855.33,"issued_at":"2026-11-06T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-07","price":1855.33,"issued_at":"2026-11-07T09:05:07+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-08","price":1855.33,"issued_at":"2026-11-08T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-09","price":1855.23,"issued_at":"2026-11-09T09:05:05+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-10","price":1855.06,"issued_at":"2026-11-10T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-11","price":1855.03,"issued_at":"2026-11-11T09:05:08+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-12","price":1854.94,"issued_at":"2026-11-12T09:05:07+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-13","price":1854.94,"issued_at":"2026-11-13T09:05:09+09:00","source_price_date":null,"status":"observed"},{"date":"2026-11-14","price":1854.89,"issued_at":"2026-11-14T09:05:08+09:00","source_price_date":null,"status":"observed"}]},"forecast":{"fuel_type":"gasoline","scope":"national_average","unit":"KRW/L","issued_at":"2026-11-14T09:05:08+09:00","baseline_date":"2026-11-14","model_baseline_price":1854.9,"status":"published_reference_scenario","points":[{"day":0,"date":"2026-11-14","price":1854.9,"kind":"model_baseline"},{"day":1,"date":"2026-11-15","price":1855.9,"kind":"forecast"},{"day":2,"date":"2026-11-16","price":1856.8,"kind":"forecast"},{"day":3,"date":"2026-11-17","price":1857.7,"kind":"forecast"},{"day":4,"date":"2026-11-18","price":1858.4,"kind":"forecast"},{"day":5,"date":"2026-11-19","price":1859.2,"kind":"forecast"},{"day":6,"date":"2026-11-20","price":1859.8,"kind":"forecast"},{"day":7,"date":"2026-11-21","price":1860.4,"kind":"forecast"},{"day":8,"date":"2026-11-22","price":1857.9,"kind":"forecast"},{"day":9,"date":"2026-11-23","price":1854.9,"kind":"forecast"},{"day":10,"date":"2026-11-24","price":1851.7,"kind":"forecast"},{"day":11,"date":"2026-11-25","price":1848,"kind":"forecast"},{"day":12,"date":"2026-11-26","price":1844,"kind":"forecast"},{"day":13,"date":"2026-11-27","price":1839.6,"kind":"forecast"},{"day":14,"date":"2026-11-28","price":1834.9,"kind":"forecast"}],"horizons":{"7":{"date":"2026-11-21","days":7,"price":1860.4,"change_from_model_baseline":5.5},"14":{"date":"2026-11-28","days":14,"price":1834.9,"change_from_model_baseline":-20}},"interpretation":"실제 관측 가격이 아닌 발행 당시 모델의 참고 시나리오입니다. 미래 가격과 절약을 보장하지 않습니다."},"validation":{"methodology":"발행 당시 예측을 동일한 유종·범위의 목표 날짜 관측값과 비교하고 현재 가격 유지 기준선과 함께 검토합니다.","score_interpretation":"모델 내부 신뢰도와 방향 점수는 검증된 적중률이나 미래 발생확률이 아닙니다.","missing_data_policy":"관측 누락·예측 기간 불일치는 임의 보간하거나 같은 기간으로 취급하지 않습니다.","comparison_caveats":["전국 평균 전망은 개별 주유소의 미래 가격과 다를 수 있습니다.","발행 시각과 원천 가격 관측 시각은 서로 다릅니다.","지역 저가 주유소 표본은 전체 지역 주유소를 대표하지 않습니다.","시점별 저가 표본의 구성이 달라질 수 있어 표본 평균 차이를 같은 주유소의 가격 변화나 인과관계로 해석하지 않습니다."]}}</script>
 </body>
 </html>

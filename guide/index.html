@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주유 타이밍은 어떻게 판단하나요? 데이터·예측 안내 | 주유ON</title>
+  <meta name="description" content="주유ON의 국내 유가, 국제유가·환율 출처와 기준 시각을 확인하세요. 전국 휘발유 예측의 범위, 지역 저가 표본, 주유량별 금액 차이와 예측 검증 방법을 설명합니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#fafaf6">
+  <link rel="canonical" href="https://dnomad-space.github.io/juyuon/guide/">
+  <link rel="icon" type="image/svg+xml" href="../asset/icon_oil.svg">
+  <link rel="stylesheet" href="../support.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="주유ON">
+  <meta property="og:title" content="주유 판단의 근거를 알고 선택하세요 | 주유ON">
+  <meta property="og:description" content="가격의 출처와 시각, 전국 휘발유 예측의 범위, 지역 저가 표본과 금액 차이 계산 방법을 확인하세요.">
+  <meta property="og:url" content="https://dnomad-space.github.io/juyuon/guide/">
+  <meta property="og:image" content="https://dnomad-space.github.io/juyuon/asset/img_appscreen.png">
+  <meta property="og:image:alt" content="주유ON 모바일 앱 화면">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="../js/analytics.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","@id":"https://dnomad-space.github.io/juyuon/guide/#article","headline":"주유 타이밍은 어떻게 판단하나요? 데이터·예측 안내","description":"주유ON의 가격 데이터 출처, 시각, 예측 범위와 계산·검증 방법 안내","mainEntityOfPage":"https://dnomad-space.github.io/juyuon/guide/","inLanguage":"ko-KR","datePublished":"2026-11-14","dateModified":"2026-11-14","author":{"@type":"Organization","name":"주유ON","url":"https://dnomad-space.github.io/juyuon/"},"publisher":{"@type":"Organization","name":"주유ON","url":"https://dnomad-space.github.io/juyuon/"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"주유ON","item":"https://dnomad-space.github.io/juyuon/"},{"@type":"ListItem","position":2,"name":"데이터·예측 안내","item":"https://dnomad-space.github.io/juyuon/guide/"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"주유ON의 가격은 개별 주유소의 실시간 가격인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 전국 값은 평균 가격이며 지역 값은 시군구별 저가 주유소 수집 표본입니다. 개별 주유소의 현재 판매 가격이나 지역 전체 평균과 다를 수 있으므로 결제할 가격은 방문할 주유소에서 확인하세요."}},
+      {"@type":"Question","name":"경유나 고급휘발유에도 예측을 적용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"현재 예측 대상은 전국 보통 휘발유 평균입니다. 경유·고급휘발유에는 해당 예측을 적용하지 않습니다. 유종별 관측 가격을 비교하는 용도로 이용하세요."}},
+      {"@type":"Question","name":"지역 표본 가격이 그 지역의 미래 가격을 뜻하나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 지역 표본은 시군구별로 수집한 저가 주유소의 휘발유 가격을 요약한 값입니다. 지역 전체 평균이나 미래 가격이 아니며, 전국 휘발유 예측을 특정 지역이나 개별 주유소에 그대로 적용하지 않습니다."}},
+      {"@type":"Question","name":"예상 금액 차이는 실제 절약한 돈인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 전망 비교는 예상 가격 변동액에 주유량을 곱한 시나리오입니다. 직접 주유소 비교는 입력한 두 가격과 주유량으로 계산하며, 추가 거리와 연비를 넣으면 이동 연료비도 반영합니다. 둘 다 실제 주유·결제를 확인한 절약 실적이 아니며, 통행료·시간 비용·카드 할인은 포함하지 않습니다."}},
+      {"@type":"Question","name":"AI 점수가 높으면 그만큼 정확하다는 뜻인가요?","acceptedAnswer":{"@type":"Answer","text":"모델 내부 점수는 실제 적중률과 다릅니다. 예측 성능은 발행 당시의 예상값을 나중에 관측된 가격과 같은 기간으로 비교해 확인해야 합니다."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="support-header support-wrap">
+    <a class="brand" href="../" aria-label="주유ON 홈"><img src="../asset/logo.svg" alt="주유ON" width="88" height="29"></a>
+    <nav class="support-nav" aria-label="주 메뉴"><a class="nav-home" href="../">오늘의 브리핑</a><a href="./" aria-current="page">판단 근거</a><a href="../download/">앱 다운로드</a></nav>
+  </header>
+  <main id="main" class="support-wrap">
+    <nav aria-label="현재 위치"><ol class="breadcrumb"><li><a href="../">홈</a></li><li aria-current="page">데이터·예측 안내</li></ol></nav>
+    <div class="support-hero">
+      <p class="eyebrow">DATA &amp; METHODOLOGY</p>
+      <h1>주유 판단의 근거를<br>알고 선택하세요.</h1>
+      <p class="support-lead">관측된 가격과 앞으로의 예상은 다릅니다. 주유ON이 어떤 데이터를 보고, 어디까지 계산하는지 설명합니다.</p>
+      <p class="reading-meta">안내 문서 업데이트 <time datetime="2026-11-14">2026. 11. 14.</time> · 가격 기준 시각은 브리핑에서 별도 확인</p>
+    </div>
+    <div class="guide-layout">
+      <aside class="guide-toc" aria-label="이 페이지 목차"><p>이 페이지에서</p><ol>
+        <li><a href="#sources">01 데이터 출처</a></li><li><a href="#freshness">02 가격의 기준 시각</a></li><li><a href="#forecast">03 예측의 범위</a></li><li><a href="#calculation">04 금액 차이 계산</a></li><li><a href="#validation">05 예측 검증 방법</a></li><li><a href="#faq">06 자주 묻는 질문</a></li>
+      </ol></aside>
+      <article class="guide-article">
+        <section class="guide-section" id="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title"><span class="section-number">01</span>어떤 데이터를 보나요?</h2>
+          <p>주유ON은 국내 유가와 국제유가·환율의 흐름을 함께 살펴봅니다. 전국 평균, 지역 저가 표본, 모델의 예상값을 구분해서 읽어주세요.</p>
+          <div class="table-scroll"><table class="guide-table">
+            <caption class="fine-print">주유ON이 사용하는 가격 지표와 원천</caption>
+            <thead><tr><th scope="col">구분</th><th scope="col">원천</th><th scope="col">읽는 방법</th></tr></thead>
+            <tbody>
+              <tr><td>전국 유가</td><td><a href="https://www.opinet.co.kr/" data-analytics-event="data_source_open" data-source="opinet" rel="noopener" target="_blank">한국석유공사 오피넷 ↗</a></td><td>전국의 보통 휘발유, 고급휘발유, 경유 평균 가격입니다. 단위는 원/L입니다.</td></tr>
+              <tr><td>지역 저가 표본</td><td><a href="https://www.opinet.co.kr/" data-analytics-event="data_source_open" data-source="opinet" rel="noopener" target="_blank">한국석유공사 오피넷 ↗</a></td><td>시군구별로 수집한 저가 주유소 최대 10곳의 휘발유 표본을 바탕으로 비교합니다. 지역 전체 주유소의 평균 가격이 아닙니다.</td></tr>
+              <tr><td>국제유가</td><td><a href="https://finance.yahoo.com/quote/CL=F/" data-analytics-event="data_source_open" data-source="yahoo_oil" rel="noopener" target="_blank">Yahoo Finance ↗</a></td><td>WTI·브렌트유 등 해외 가격 지표를 흐름 분석에 사용합니다. 국내 주유소 판매 가격과는 다른 지표입니다.</td></tr>
+              <tr><td>원/달러 환율</td><td><a href="https://finance.yahoo.com/quote/USDKRW=X/" data-analytics-event="data_source_open" data-source="yahoo_fx" rel="noopener" target="_blank">Yahoo Finance ↗</a></td><td>국제유가와 함께 원화 기준 비용의 변화를 살피는 참고 지표입니다.</td></tr>
+              <tr><td>주유온 발행 데이터</td><td><a href="../data/briefing.json" data-analytics-event="data_source_open" data-source="published_data" rel="noopener" target="_blank">이 페이지의 발행 데이터 ↗</a></td><td>화면에 사용한 발행 시각이 명시된 데이터 스냅샷입니다. 실시간 조회나 전체 발행 이력이 아닙니다.</td></tr>
+            </tbody>
+          </table></div>
+          <div class="note"><p><strong>전국 평균과 지역 저가 표본은 집계 범위가 달라요.</strong><br>두 값의 차이를 같은 조건에서의 지역 간 가격 차이나, 앞으로 반드시 내릴 금액으로 해석하지 않습니다. 실제 결제 가격은 방문할 주유소에서 확인하세요.</p></div>
+        </section>
+        <section class="guide-section" id="freshness" aria-labelledby="freshness-title">
+          <h2 id="freshness-title"><span class="section-number">02</span>가격은 언제 기준인가요?</h2>
+          <p><strong>브리핑이 만들어진 시각과 원천 가격의 관측 시각은 같지 않을 수 있습니다.</strong> 국제 시장의 휴장이나 원천 제공 지연으로 지표마다 기준일이 다를 수 있습니다.</p>
+          <ul>
+            <li><strong>브리핑 발행 시각:</strong> 주유ON이 수집한 정보를 묶어 발행한 시각입니다. 원천 가격의 실시간 갱신을 뜻하지 않습니다.</li>
+            <li><strong>원천 관측 시각:</strong> 현재 발행 데이터에는 가격별 관측 시각이 모두 제공되지는 않습니다. 발행 시각만으로 각 가격이 최신이라고 단정하지 않습니다.</li>
+            <li><strong>이전 관측 대비:</strong> 직전 유효 관측값과 비교한 변화입니다. 관측 날짜가 이어지지 않았다면 하루 동안의 변동과 다릅니다.</li>
+          </ul>
+          <p>웹 브리핑에는 표시된 발행 시각의 데이터가 담깁니다. <strong>발행 후 48시간이 지난 브리핑은 참고용으로 표시하고 전망을 이용한 예상 금액 비교를 중단합니다. 직접 가격을 입력하는 주유소 비교는 계속 이용할 수 있습니다.</strong> 새로운 관측값이 없다는 이유로 가격이 0원이거나 변동이 없다고 해석하지 않습니다.</p>
+        </section>
+        <section class="guide-section" id="forecast" aria-labelledby="forecast-title">
+          <h2 id="forecast-title"><span class="section-number">03</span>어디까지 예측하나요?</h2>
+          <p><strong>현재 예측 대상은 전국 보통 휘발유 평균입니다.</strong> 고급휘발유·경유와 지역별 값은 관측 가격을 비교하는 데 사용합니다. 전국 휘발유 예측을 다른 유종이나 특정 지역의 미래 가격으로 그대로 적용하지 않습니다.</p>
+          <p>국제유가, 환율, 국내 가격의 흐름을 참고해 앞으로의 변동을 추정합니다. 이후의 시장 변화와 실제 주유소 가격 조정에 따라 예상은 달라질 수 있습니다.</p>
+          <div class="note note-warm"><p><strong>예상 차이가 작다면 일정을 우선하세요.</strong><br>필요한 주행을 미루거나 연료가 부족한데도 기다릴 필요는 없습니다. 주유 타이밍은 내 일정과 잔여 연료를 함께 보고 결정하세요.</p></div>
+          <p>모델 내부 점수는 모델 간 일치 정도 등을 반영한 값입니다. 검증된 적중률이나 미래 가격의 실제 발생확률로 해석하지 않습니다.</p>
+        </section>
+        <section class="guide-section" id="calculation" aria-labelledby="calculation-title">
+          <h2 id="calculation-title"><span class="section-number">04</span>내 주유량으로 금액을 비교해요.</h2>
+          <p>리터당 차이만으로는 체감이 어렵습니다. 주유ON에서는 앞으로의 전망과 직접 확인한 주유소 가격을 각각 비교할 수 있습니다.</p>
+          <h3>전망으로 주유 시점을 비교할 때</h3>
+          <div class="formula">예상 변동액 <span>×</span> 주유량 <span>=</span> 예상 금액 차이</div>
+          <p>예를 들어 리터당 <strong>10원 하락을 가정</strong>하고 40L를 주유한다면 금액 차이는 400원입니다. 이 숫자는 계산 방법을 설명하기 위한 예시이며 현재 유가 예측이 아닙니다.</p>
+          <p>전망 비교는 전국 보통 휘발유 모델 가격을 적용한 시나리오입니다. 추가 이동 비용을 포함하지 않습니다.</p>
+          <h3>두 주유소의 가격을 직접 비교할 때</h3>
+          <p>가까운 주유소와 비교할 주유소에서 확인한 <strong>같은 유종의 가격</strong>을 넣어주세요. 추가로 이동할 왕복 거리와 실제 연비를 입력하면, 이동에 드는 연료비도 빼서 계산합니다.</p>
+          <div class="formula">가격 차이 <span>×</span> 주유량 <span>−</span> 추가 이동 연료비</div>
+          <p><strong>가격 차이</strong> = 가까운 주유소 가격 − 비교할 주유소 가격<br><strong>추가 이동 연료비</strong> = 추가 왕복 거리(km) ÷ 실제 연비(km/L) × 가까운 주유소 가격(원/L)</p>
+          <p>추가 거리는 평소 경로보다 더 달리는 왕복 거리입니다. 입력하지 않으면 이동 연료비는 0원으로 계산합니다. 실제 경로를 조회하거나 교통 상황을 반영한 값은 아닙니다.</p>
+          <p>계산 결과가 양수면 비교한 주유소가, 음수면 가까운 주유소가 입력한 조건에서 적게 듭니다. 두 비교 모두 실제 주유·결제를 확인한 절약 실적은 아니며, 통행료·시간 비용·카드 할인은 포함하지 않습니다.</p>
+        </section>
+        <section class="guide-section" id="validation" aria-labelledby="validation-title">
+          <h2 id="validation-title"><span class="section-number">05</span>예측은 어떻게 확인하나요?</h2>
+          <p>예측의 성능은 이후의 실제 가격과 비교해야 알 수 있습니다. 주유ON의 예측을 검증할 때는 다음 기준을 사용합니다.</p>
+          <ol>
+            <li><strong>발행 당시의 예측을 남깁니다.</strong> 나중에 새 예측으로 과거 결과를 바꾸지 않습니다.</li>
+            <li><strong>같은 유종과 기간을 비교합니다.</strong> 7일 예측은 정확히 7일 후, 14일 예측은 14일 후의 전국 보통 휘발유 평균과 대조합니다.</li>
+            <li><strong>단순한 기준선과 함께 봅니다.</strong> “현재 가격이 그대로 유지된다”는 예상보다 오차가 작은지도 확인합니다.</li>
+            <li><strong>표본 수와 빠진 데이터를 밝힙니다.</strong> 목표 날짜의 실제값이나 예측 끝점이 없으면 임의로 채우지 않고 제외합니다.</li>
+          </ol>
+          <p>평균절대오차(MAE)는 예상 가격과 실제 가격의 차이를 절댓값으로 평균 낸 값입니다. 단위는 원/L이며 작을수록 오차가 적습니다. 특정 기간의 결과가 모든 시장 상황에서의 성능을 보장하지는 않습니다.</p>
+          <p class="fine-print">주유ON에 저장된 관측값과의 비교와 원천 데이터 자체의 정확성을 독립적으로 확인하는 검증은 서로 다릅니다.</p>
+        </section>
+        <section class="guide-section faq" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title"><span class="section-number">06</span>자주 묻는 질문</h2>
+          <details open><summary>주유ON의 가격은 개별 주유소의 실시간 가격인가요?</summary><p>아니요. 전국 값은 평균 가격이며 지역 값은 시군구별 저가 주유소 수집 표본입니다. 개별 주유소의 현재 판매 가격이나 지역 전체 평균과 다를 수 있으므로 결제할 가격은 방문할 주유소에서 확인하세요.</p></details>
+          <details><summary>경유나 고급휘발유에도 예측을 적용할 수 있나요?</summary><p>현재 예측 대상은 전국 보통 휘발유 평균입니다. 경유·고급휘발유에는 해당 예측을 적용하지 않습니다. 유종별 관측 가격을 비교하는 용도로 이용하세요.</p></details>
+          <details><summary>지역 표본 가격이 그 지역의 미래 가격을 뜻하나요?</summary><p>아니요. 지역 표본은 시군구별로 수집한 저가 주유소의 휘발유 가격을 요약한 값입니다. 지역 전체 평균이나 미래 가격이 아니며, 전국 휘발유 예측을 특정 지역이나 개별 주유소에 그대로 적용하지 않습니다.</p></details>
+          <details><summary>예상 금액 차이는 실제 절약한 돈인가요?</summary><p>아니요. 전망 비교는 예상 가격 변동액에 주유량을 곱한 시나리오입니다. 직접 주유소 비교는 입력한 두 가격과 주유량으로 계산하며, 추가 거리와 연비를 넣으면 이동 연료비도 반영합니다. 둘 다 실제 주유·결제를 확인한 절약 실적이 아니며, 통행료·시간 비용·카드 할인은 포함하지 않습니다.</p></details>
+          <details><summary>AI 점수가 높으면 그만큼 정확하다는 뜻인가요?</summary><p>모델 내부 점수는 실제 적중률과 다릅니다. 예측 성능은 발행 당시의 예상값을 나중에 관측된 가격과 같은 기간으로 비교해 확인해야 합니다.</p></details>
+        </section>
+        <div class="guide-cta"><p>이제 내 주유량으로<br>오늘의 차이를 확인해보세요.</p><a class="button" href="../">오늘의 브리핑 보기 →</a></div>
+      </article>
+    </div>
+  </main>
+  <footer class="support-footer support-wrap"><p>© 주유ON</p><nav aria-label="하단 메뉴"><a href="../">오늘의 브리핑</a><a href="../download/">앱 다운로드</a><a href="../privacy/" data-analytics-event="click_privacy_policy" data-source="footer">개인정보처리방침</a><a href="mailto:dnomad.space@gmail.com" data-analytics-event="click_contact" data-source="footer">문의하기</a></nav></footer>
+</body>
+</html>
